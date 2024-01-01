@@ -9,6 +9,9 @@ export default function Products() {
   const [selectedValue, setSelectedValue] = useState('1');
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 6;
+  
+
+
 
   // Function to filter products based on type
   const getTypeFilteredProducts = (type) => {
@@ -179,7 +182,7 @@ export default function Products() {
     script.src = "assets/js/theme-script.js";
     script.async = true;
     document.body.appendChild(script);
-    
+
 
     // For Pagination
     setCurrentPage(1);
@@ -191,8 +194,11 @@ export default function Products() {
   }, [selectedValue]);
 
 
+
   return (
     <>
+
+    
       <div className="page-wrapper">
         <section className="page-title parallaxie" data-bg-img="assets/images/bg/06.jpeg">
           <div className="container">
@@ -214,7 +220,6 @@ export default function Products() {
         </section>
 
         <div className="page-content">
-          {/* <!--product grid start--> */}
           <section>
             <div className="container">
               <div className="row">
@@ -395,7 +400,7 @@ export default function Products() {
                     <h4 className="widget-title mb-3">Populer Product</h4>
                     <div className="row align-items-center mb-4">
                       <div className="col-sm-4">
-                        <img src="assets/images/product/01.jpeg" className="img-fluid" alt="..." />
+                        <img src="assets/images/product/01.jpeg" className="img-fluid" alt="Product Image" />
                       </div>
                       <div className="col-sm-8">
                         <h5 className="h6">
@@ -407,7 +412,7 @@ export default function Products() {
                     </div>
                     <div className="row align-items-center mb-4">
                       <div className="col-sm-4">
-                        <img src="assets/images/product/03.jpeg" className="img-fluid" alt="..." />
+                        <img src="assets/images/product/03.jpeg" className="img-fluid" alt="Product Image" />
                       </div>
                       <div className="col-sm-8">
                         <h5 className="h6">
@@ -419,7 +424,7 @@ export default function Products() {
                     </div>
                     <div className="row align-items-center">
                       <div className="col-sm-4">
-                        <img src="assets/images/product/04.jpeg" className="img-fluid" alt="..." />
+                        <img src="assets/images/product/04.jpeg" className="img-fluid" alt="Product Image" />
                       </div>
                       <div className="col-sm-8">
                         <h5 className="h6">
@@ -453,7 +458,7 @@ export default function Products() {
               </div>
             </div>
           </section>
-          {/* <!--product grid end--> */}
+
         </div >
 
       </div >

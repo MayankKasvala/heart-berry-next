@@ -1,7 +1,7 @@
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Blog from "../Blog";
-import { clients_review } from "@/constant/home/data";
+import { clients_review, service_data } from "@/constant/home/data";
 import { Newses } from "@/constant/news/data";
 
 export default function Home() {
@@ -17,6 +17,16 @@ export default function Home() {
   }, []);
 
   const limitedBlogs = Newses.slice(0, 3);
+  const [hoveredItem, setHoveredItem] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setHoveredItem(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredItem(null);
+  };
+
   return (
     <>
       <div className="page-wrapper">
@@ -36,7 +46,7 @@ export default function Home() {
                   <div className="row">
                     <div className="col-lg-6 col-md-10 col-12">
                       <h1 className="mb-4 text-black">
-                        Welcome To{" "}
+                        Welcome To
                         <span className="text-theme">Heartberry</span> Overseas
                       </h1>
                       <p className="lead font-w-5 text-black">
@@ -48,11 +58,10 @@ export default function Home() {
                       </p>
                       <div className="btn-box mt-5">
                         <Link className="btn btn-theme" href="/about">
-                          {" "}
+
                           <span>More About</span>
                         </Link>
-                        <Link className="btn btn-dark" href="#">
-                          {" "}
+                        <Link className="btn btn-dark" href="https://themeht.com/template/labortech/html/index.html" target="_blank">
                           <span>Our Service</span>
                         </Link>
                       </div>
@@ -83,11 +92,11 @@ export default function Home() {
                       </p>
                       <div className="btn-box mt-5">
                         <Link className="btn btn-theme" href="/about">
-                          {" "}
+
                           <span>More About</span>
                         </Link>
-                        <Link className="btn btn-dark" href="#">
-                          {" "}
+                        <Link className="btn btn-dark" href="https://themeht.com/template/labortech/html/index.html" target="_blank">
+
                           <span>Our Service</span>
                         </Link>
                       </div>
@@ -98,95 +107,48 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         <div className="page-content">
+
           <section className="pb-0">
             <div className="container">
-              <div className="row">
-                <div className="col-lg-3 col-sm-6">
-                  <div className="featured-item style-1 h-100">
-                    <div className="featured-icon">
-                      {" "}
-                      <i className="flaticon-laboratory-1"></i>
-                    </div>
-                    <div className="featured-title">
-                      <h5>High Quality Medicines</h5>
-                    </div>
-                    <div className="featured-desc">
-                      <p>
-                        The quality of our products is a matter of high
-                        importance and pride for us. Because some patients get
-                        treatment with those medicines.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-3 col-sm-6 mt-5 mt-sm-0">
-                  <div className="featured-item style-1 active h-100">
-                    <div className="featured-icon">
-                      {" "}
-                      <i className="flaticon-laboratory"></i>
-                    </div>
-                    <div className="featured-title">
-                      <h5>Shipping Worldwide</h5>
-                    </div>
-                    <div className="featured-desc">
-                      <p>
-                        Our warehouses are located worldwide. Your order will be
-                        delivered within the guaranteed delivery time. We assure
-                        you of that.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-3 col-sm-6 mt-5 mt-lg-0">
-                  <div className="featured-item style-1 h-100">
-                    <div className="featured-icon">
-                      {" "}
-                      <i className="flaticon-biology-1"></i>
-                    </div>
-                    <div className="featured-title">
-                      <h5>24/7 Our Team Works</h5>
-                    </div>
-                    <div className="featured-desc">
-                      <p>
-                        If you have any questions about our products, delivery
-                        options, or your order status please contact us in any
-                        way you prefer.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-3 col-sm-6 mt-5 mt-lg-0">
-                  <div className="featured-item style-1 h-100">
-                    <div className="featured-icon">
-                      {" "}
-                      <i className="flaticon-help-call"></i>
-                    </div>
-                    <div className="featured-title">
-                      <h5>Bonuses And Discounts</h5>
-                    </div>
-                    <div className="featured-desc">
-                      <p>
-                        Hello friends join our organization and enjoy another
-                        10% bonus on your advance order.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              <div className="row gy-xl-0 gy-4">
+                {
+                  service_data.map((article, index) => {
+                    return (
+                      <>
+                        <article key={index} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={handleMouseLeave} className="col-xl-3 col-md-6">
+                          <div className={`featured-item style-1 ${hoveredItem === index ? 'active' : ''} h-100`}>
+                            <div className="featured-icon">
+                              <img src={hoveredItem === index ? article.imageHovered : article.imageDefault} alt={hoveredItem === index ? 'Hovered Image' : 'Default Image'} />
+                            </div>
+                            <div className="featured-title">
+                              <h2 className="fs-5">{article.title}</h2>
+                            </div>
+                            <div className="featured-desc">
+                              <p>{article.description}</p>
+                            </div>
+                          </div>
+                        </article>
+                      </>
+                    )
+                  })
+                }
               </div>
             </div>
           </section>
+
           <section>
             <div className="container">
               <div className="row align-items-center justify-content-between">
-                <div className="col-lg-5 col-12 order-lg-1">
+                <article className="col-lg-5 col-12 order-lg-1">
                   <img
                     className="img-fluid"
                     src="assets/images/about/global.jpg"
-                    alt=""
+                    alt="Heartberry Overseas Around the Global"
                   />
-                </div>
-                <div className="col-lg-7 col-12 mt-6 mt-lg-0">
+                </article>
+                <article className="col-lg-7 col-12 mt-6 mt-lg-0">
                   <div className="row align-items-end">
                     <div className="col-md-7">
                       <div className="section-title">
@@ -194,53 +156,39 @@ export default function Home() {
                           Heartberry Overseas Around the Global
                         </h2>
                         <p className="text-black font-w-5 mb-3">
-                          We’re here to care for you and your entire family
-                          doctor will general health!
+                          We’re here to care for you and your entire family doctor will general health!
                         </p>
                         <p>
-                          Heartberry Overseas Privet Limited endeavors to become
-                          the World-class Pharmaceutical Exporter for India And
-                          Expanded and grown manifold since its inception, We
-                          have Operations in over 40+ countries and 5+
-                          countinents globally.
+                          Heartberry Overseas Private Limited endeavors to become the World-class Pharmaceutical Exporter for India And Expanded and grown manifold since its inception. We have operations in over 40+ countries and 5+ continents globally.
                         </p>
                       </div>
                       <Link className="btn btn-theme" href="/about">
-                        {" "}
                         <span>More About</span>
                       </Link>
                     </div>
                     <div className="col-md-5 mt-6 mt-md-0">
                       <p className="mb-4">
-                        Heartberry Overseas Pvt. Ltd's aim is to make the
-                        medicines we make available to patients easily. And make
-                        it useful.
+                        Heartberry Overseas Pvt. Ltd's aim is to make the medicines we make available to patients easily and make it useful.
                       </p>
-                      <img
-                        className="img-fluid"
-                        src="assets/images/sign.png"
-                        alt=""
-                      />
+                      <img className="img-fluid" src="assets/images/sign.png" alt="Heartberry Overseas Pvt. Ltd Signature" />
                       <ul className="list-unstyled list-icon mt-4">
                         <li className="mb-3">
-                          <i className="las la-check"></i>Export medicines to
-                          40+ countries
+                          <i className="las la-check"></i>Export medicines to 40+ countries
                         </li>
                         <li className="mb-3">
-                          <i className="las la-check"></i>200+ International
-                          Product
+                          <i className="las la-check"></i>200+ International Product
                         </li>
                         <li>
-                          <i className="las la-check"></i>5 continents globally
-                          include{" "}
+                          <i className="las la-check"></i>5 continents globally include
                         </li>
                       </ul>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
             </div>
           </section>
+
           <section className="position-relative light-bg">
             <div className="container z-index-1">
               <div className="row justify-content-center text-center">
@@ -269,11 +217,10 @@ export default function Home() {
                           <img
                             className="img-fluid"
                             src="assets/images/service/01.jpeg"
-                            alt=""
+                            alt="Excellence Service Image"
                           />
-                          <div className="service-icon">
-                            {" "}
-                            <i className="flaticon-biology-1"></i>
+                          <div className="service-icon d-flex align-items-center justify-content-center">
+                            <img src="assets/images/icons/05.svg" alt=" Excellence Image Icon" />
                           </div>
                         </div>
                         <div className="service-desc white-bg mt-n5 pt-7">
@@ -284,7 +231,7 @@ export default function Home() {
                             Every Medicine is Quality Tested 2000 + Product,
                             Near 100% Fullfillment Rate. Most Preferred online
                             Pharmacy.
-                          </p>{" "}
+                          </p>
                           <Link className="link-btn" href="/service">
                             <i className="las la-long-arrow-alt-right"></i>
                           </Link>
@@ -297,11 +244,10 @@ export default function Home() {
                           <img
                             className="img-fluid"
                             src="assets/images/service/03.jpeg"
-                            alt=""
+                            alt="Pharmacy Service Image"
                           />
-                          <div className="service-icon">
-                            {" "}
-                            <i className="flaticon-test"></i>
+                          <div className="service-icon d-flex align-items-center justify-content-center">
+                            <img src="assets/images/icons/06.svg" alt=" Pharmacy Image Icon" />
                           </div>
                         </div>
                         <div className="service-desc white-bg mt-n5 pt-7">
@@ -311,7 +257,7 @@ export default function Home() {
                           <p>
                             You can enjoy any pharmacy service with our
                             professional staff 24/7.
-                          </p>{" "}
+                          </p>
                           <Link className="link-btn" href="/service">
                             <i className="las la-long-arrow-alt-right"></i>
                           </Link>
@@ -324,11 +270,10 @@ export default function Home() {
                           <img
                             className="img-fluid"
                             src="assets/images/service/02.jpeg"
-                            alt=""
+                            alt="Delivery Guarantee Service Image"
                           />
-                          <div className="service-icon">
-                            {" "}
-                            <i className="flaticon-research"></i>
+                          <div className="service-icon d-flex align-items-center justify-content-center">
+                            <img src="assets/images/icons/07.svg" alt=" Pharmacy Image Icon" />
                           </div>
                         </div>
                         <div className="service-desc white-bg mt-n5 pt-7">
@@ -338,7 +283,7 @@ export default function Home() {
                           <p>
                             Happy And Hassle-Free User Expeience For Thousands
                             of Customer in More Than 40 countries.
-                          </p>{" "}
+                          </p>
                           <Link className="link-btn" href="/service">
                             <i className="las la-long-arrow-alt-right"></i>
                           </Link>
@@ -359,6 +304,7 @@ export default function Home() {
               </svg>
             </div>
           </section>
+
           <section className="p-0">
             <div className="container">
               <div className="row">
@@ -368,16 +314,10 @@ export default function Home() {
                       <div className="col-lg-3 col-sm-6">
                         <div className="counter d-flex">
                           <div className="counter-icon me-3">
-                            {" "}
-                            <i className="flaticon-medical-laboratory-1"></i>
+                            <img src="assets/images/icons/08.svg"  alt="Excellence Image Icon"/>
                           </div>
                           <div className="counter-desc">
-                            {" "}
-                            <span
-                              className="count-number text-black"
-                              data-to="200"
-                              data-speed="2000"
-                            >
+                            <span className="count-number text-black" data-to="200" data-speed="2000" >
                               2000 +
                             </span>
                             <h6>Excellence</h6>
@@ -387,16 +327,10 @@ export default function Home() {
                       <div className="col-lg-3 col-sm-6 mt-5 mt-sm-0">
                         <div className="counter d-flex">
                           <div className="counter-icon me-3">
-                            {" "}
-                            <i className="flaticon-heathcare-and-medical"></i>
+                            <img src="assets/images/icons/09.svg"  alt="Delivery Guarantee Image Icon"/>
                           </div>
                           <div className="counter-desc">
-                            {" "}
-                            <span
-                              className="count-number text-black"
-                              data-to="40"
-                              data-speed="2000"
-                            >
+                            <span className="count-number text-black" data-to="40" data-speed="2000">
                               40
                             </span>
                             <h6>Delivery Guarantee</h6>
@@ -406,16 +340,10 @@ export default function Home() {
                       <div className="col-lg-3 col-sm-6 mt-5 mt-lg-0">
                         <div className="counter d-flex">
                           <div className="counter-icon me-3">
-                            {" "}
-                            <i className="flaticon-pharmacy"></i>
+                            <img src="assets/images/icons/10.svg"  alt="Happy Clients Image Icon"/>
                           </div>
                           <div className="counter-desc">
-                            {" "}
-                            <span
-                              className="count-number text-black"
-                              data-to="6000"
-                              data-speed="2000"
-                            >
+                            <span className="count-number text-black" data-to="6000" data-speed="2000">
                               6000
                             </span>
                             <h6>Happy Clients</h6>
@@ -425,16 +353,10 @@ export default function Home() {
                       <div className="col-lg-3 col-sm-6 mt-5 mt-lg-0">
                         <div className="counter d-flex">
                           <div className="counter-icon me-3">
-                            {" "}
-                            <i className="flaticon-award"></i>
+                            <img src="assets/images/icons/11.svg"  alt="Awards Winning Image Icon"/>
                           </div>
                           <div className="counter-desc">
-                            {" "}
-                            <span
-                              className="count-number text-black"
-                              data-to="28"
-                              data-speed="2000"
-                            >
+                            <span className="count-number text-black" data-to="28" data-speed="2000" >
                               28
                             </span>
                             <h6>Awards Winning</h6>
@@ -447,6 +369,7 @@ export default function Home() {
               </div>
             </div>
           </section>
+
           <section className="p-0 mt-n6">
             <div className="container-fluid ps-0">
               <div className="row">
@@ -526,10 +449,10 @@ export default function Home() {
                     <img
                       className="img-fluid w-100"
                       src="assets/images/about/02.jpeg"
-                      alt=""
+                      alt="Pharmacy Image"
                     />
                     <div className="video-btn video-btn-pos">
-                      {" "}
+
                       <Link
                         className="play-btn popup-youtube mr-3"
                         href="https://www.youtube.com/watch?v=P_wKDMcr1Tg"
@@ -542,6 +465,7 @@ export default function Home() {
               </div>
             </div>
           </section>
+
           <section className="pb-0">
             <div className="container">
               <div className="row">
@@ -561,7 +485,7 @@ export default function Home() {
                         <img
                           className="img-fluid"
                           src="assets/images/clients/09.png"
-                          alt=""
+                          alt="Client Logo 1"
                         />
                       </div>
                     </div>
@@ -570,7 +494,7 @@ export default function Home() {
                         <img
                           className="img-fluid"
                           src="assets/images/clients/10.png"
-                          alt=""
+                          alt="Client Logo 2"
                         />
                       </div>
                     </div>
@@ -579,7 +503,7 @@ export default function Home() {
                         <img
                           className="img-fluid"
                           src="assets/images/clients/11.png"
-                          alt=""
+                          alt="Client Logo 3"
                         />
                       </div>
                     </div>
@@ -588,7 +512,7 @@ export default function Home() {
                         <img
                           className="img-fluid"
                           src="assets/images/clients/12.png"
-                          alt=""
+                          alt="Client Logo 4"
                         />
                       </div>
                     </div>
@@ -597,7 +521,7 @@ export default function Home() {
                         <img
                           className="img-fluid"
                           src="assets/images/clients/13.png"
-                          alt=""
+                          alt="Client Logo 5"
                         />
                       </div>
                     </div>
@@ -606,7 +530,7 @@ export default function Home() {
                         <img
                           className="img-fluid"
                           src="assets/images/clients/14.png"
-                          alt=""
+                          alt="Client Logo 6"
                         />
                       </div>
                     </div>
@@ -615,7 +539,7 @@ export default function Home() {
                         <img
                           className="img-fluid"
                           src="assets/images/clients/15.png"
-                          alt=""
+                          alt="Client Logo 7"
                         />
                       </div>
                     </div>
@@ -624,7 +548,7 @@ export default function Home() {
                         <img
                           className="img-fluid"
                           src="assets/images/clients/16.png"
-                          alt=""
+                          alt="Client Logo "
                         />
                       </div>
                     </div>
@@ -633,9 +557,7 @@ export default function Home() {
               </div>
             </div>
           </section>
-          {/* <!--client end--> */}
 
-          {/* <!--pharmacy innvative start--> */}
           <section className="pb-0">
             <div className="container">
               <div className="row justify-content-center text-center">
@@ -650,148 +572,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="container-fluid">
-              <div className="row">
-                <div className="col">
-                  <div
-                    className="owl-carousel no-pb popup-gallery"
-                    data-dots="false"
-                    data-items="5"
-                    data-md-items="3"
-                    data-sm-items="2"
-                    data-xs-items="1"
-                    data-margin="10"
-                  >
-                    <div className="item">
-                      <div className="cases-item position-relative overflow-hidden">
-                        <img
-                          className="img-fluid w-100"
-                          src="assets/images/product/01.jpg"
-                          alt=""
-                        />
-                        <Link
-                          className="popup-img"
-                          href="assets/images/project/large/01.jpg"
-                        >
-                          {" "}
-                          <i className="las la-plus"></i>
-                        </Link>
-                        <div className="cases-title">
-                          {" "}
-                          <span>Pathology</span>
-                          <h4>
-                            <Link href="research-single.html">
-                              Personnel Competence
-                            </Link>
-                          </h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="item">
-                      <div className="cases-item position-relative overflow-hidden">
-                        <img
-                          className="img-fluid w-100"
-                          src="assets/images/product/02.jpg"
-                          alt=""
-                        />
-                        <Link
-                          className="popup-img"
-                          href="assets/images/project/large/02.jpg"
-                        >
-                          {" "}
-                          <i className="las la-plus"></i>
-                        </Link>
-                        <div className="cases-title">
-                          {" "}
-                          <span>Pathology</span>
-                          <h4>
-                            <Link href="research-single.html">
-                              Personnel Competence
-                            </Link>
-                          </h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="item">
-                      <div className="cases-item position-relative overflow-hidden">
-                        <img
-                          className="img-fluid w-100"
-                          src="assets/images/product/03.jpg"
-                          alt=""
-                        />
-                        <Link
-                          className="popup-img"
-                          href="assets/images/project/large/03.jpg"
-                        >
-                          {" "}
-                          <i className="las la-plus"></i>
-                        </Link>
-                        <div className="cases-title">
-                          {" "}
-                          <span>Pathology</span>
-                          <h4>
-                            <Link href="research-single.html">
-                              Personnel Competence
-                            </Link>
-                          </h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="item">
-                      <div className="cases-item position-relative overflow-hidden">
-                        <img
-                          className="img-fluid w-100"
-                          src="assets/images/product/04.jpg"
-                          alt=""
-                        />
-                        <Link
-                          className="popup-img"
-                          href="assets/images/project/large/04.jpg"
-                        >
-                          {" "}
-                          <i className="las la-plus"></i>
-                        </Link>
-                        <div className="cases-title">
-                          {" "}
-                          <span>Pathology</span>
-                          <h4>
-                            <Link href="research-single.html">
-                              Personnel Competence
-                            </Link>
-                          </h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="item">
-                      <div className="cases-item position-relative overflow-hidden">
-                        <img
-                          className="img-fluid w-100"
-                          src="assets/images/product/05.jpg"
-                          alt=""
-                        />
-                        <Link
-                          className="popup-img"
-                          href="assets/images/project/large/05.jpg"
-                        >
-                          {" "}
-                          <i className="las la-plus"></i>
-                        </Link>
-                        <div className="cases-title">
-                          {" "}
-                          <span>Pathology</span>
-                          <h4>
-                            <Link href="research-single.html">
-                              Personnel Competence
-                            </Link>
-                          </h4>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </section>
+
           <section className="theme-bg py-5">
             <div className="container">
               <div className="row align-items-center">
@@ -804,7 +586,6 @@ export default function Home() {
                 <div className="col-md-5 col-12 ms-auto mt-3 mt-lg-0">
                   <div className="d-flex align-items-start justify-content-end">
                     <div className="text-white text-end">
-                      {" "}
                       <span>Help Desk 24/7</span>
                       <h3 className="font-w-4">
                         <Link
@@ -814,15 +595,16 @@ export default function Home() {
                           +91 9854499900
                         </Link>
                       </h3>
-                    </div>{" "}
+                    </div>
                     <span className="white-bg d-inline-block p-2 ms-4">
-                      <i className="las la-phone ic-3x text-theme"></i>
+                      <i className="las la-phone ic-3x text-theme" alt="Phone Icon"></i>
                     </span>
                   </div>
                 </div>
               </div>
             </div>
           </section>
+
           <section className="pb-0">
             <div className="container">
               <div className="row justify-content-center text-center">
@@ -850,7 +632,7 @@ export default function Home() {
                     data-margin="24"
                     data-autoplay="true"
                   >
-                    {clients_review.map((props,i) => {
+                    {clients_review.map((props, i) => {
                       return (
                         <div key={i} className="item ">
                           <div className="border rounded p-4 h-100 ">
@@ -860,7 +642,7 @@ export default function Home() {
                                   <img
                                     src={props.clients_img}
                                     className="rounded-circle"
-                                    alt=""
+                                    alt={`${props.name}'s profile`}
                                   />
                                 </div>
                                 <div>
@@ -873,7 +655,7 @@ export default function Home() {
                               <img
                                 src="assets/images/qutes.svg"
                                 className=""
-                                alt=""
+                                alt="Qutes"
                               />
                             </div>
                             <p className="pt-3 mb-0">{props.content}</p>
@@ -886,6 +668,7 @@ export default function Home() {
               </div>
             </div>
           </section>
+
           <section className="pb-0">
             <div className="container">
               <div className="section-title text-center">
@@ -1025,7 +808,7 @@ export default function Home() {
                       >
                         <div className="accordion-body">
                           You can contact us at +91 9854499900 or drop your
-                          inquiry at info@heartberryoverseas.com. We are
+                          inquiry at <Link href="mailto:info@heartberryoverseas.com">info@heartberryoverseas.com</Link> We are
                           headquartered at Surat.
                         </div>
                       </div>
@@ -1085,7 +868,7 @@ export default function Home() {
                   </div>
                   <div className="btn-box text-center mt-4">
                     <Link className="btn btn-dark" href="/faq">
-                      {" "}
+
                       <span>More Faq</span>
                     </Link>
                   </div>
@@ -1093,6 +876,7 @@ export default function Home() {
               </div>
             </div>
           </section>
+
           <section className="pb-0">
             <div className="container">
               <div className="row justify-content-center text-center">
@@ -1108,10 +892,11 @@ export default function Home() {
                 </div>
               </div>
               <div className="gap-4  blogs-content">
-                <Blog blog_data={latest_blog} />
+                <Blog blog_data={limitedBlogs} />
               </div>
             </div>
           </section>
+
           <section>
             <div className="container">
               <div className="row justify-content-center text-center">
@@ -1125,7 +910,7 @@ export default function Home() {
                 id="contact-form"
                 className="row p-4 rounded mx-auto enquiry_content"
                 method="post"
-                action="php/contact.php"
+                action=""
               >
                 <div id="formmessage"></div>
                 <div className="form-group col-md-6">
@@ -1200,6 +985,7 @@ export default function Home() {
               </form>
             </div>
           </section>
+
         </div>
       </div>
 

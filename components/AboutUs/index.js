@@ -35,7 +35,7 @@ export default function Aboutus() {
             </div>
           </div>
         </section>
-        {/* <!--page title end--> */}
+
 
 
         <div className="page-content">
@@ -45,22 +45,24 @@ export default function Aboutus() {
               <div className="row align-items-start justify-content-between">
                 <div className="col-lg-6 col-12">
                   <div className="me-5">
-                    <img className="img-fluid w-100" src="assets/images/about/03.jpeg" alt="" />
+                    <img className="img-fluid w-100" src="assets/images/about/03.jpeg" alt="About Image" />
                   </div>
                   <div className="white-bg mt-n6 p-5 shadow-sm ms-5 z-index-1">
                     <div className="owl-carousel no-pb" data-dots="false" data-items="2" data-autoplay="true" data-autoplay-timeout="8000">
                       <div className="item">
                         <div className="counter d-flex">
-                          <div className="counter-icon me-3"> <i className="flaticon-medical-laboratory-1"></i>
+                          <div className="counter-icon me-3">
+                          <img src="assets/images/icons/12.svg" alt="Effective Meds Iamge Icon" />
                           </div>
-                          <div className="counter-desc"> <span className="count-number text-black" data-to="500" data-speed="2000">500 </span>
+                          <div className="counter-desc"> <span className="count-number text-black" data-to="500" data-speed="2000">500</span>
                             <h6>Effective Meds</h6>
                           </div>
                         </div>
                       </div>
                       <div className="item">
                         <div className="counter d-flex">
-                          <div className="counter-icon me-3"> <i className="flaticon-heathcare-and-medical"></i>
+                          <div className="counter-icon me-3">
+                            <img src="assets/images/icons/09.svg" alt="Delivery Guarantee Image Icon" />
                           </div>
                           <div className="counter-desc"> <span className="count-number text-black" data-to="40" data-speed="2000">40</span>
                             <h6>Delivery Guarantee</h6>
@@ -69,7 +71,8 @@ export default function Aboutus() {
                       </div>
                       <div className="item">
                         <div className="counter d-flex">
-                          <div className="counter-icon me-3"> <i className="flaticon-pharmacy"></i>
+                          <div className="counter-icon me-3">
+                            <img src="assets/images/icons/10.svg" alt="Happy Clients Image Icon" />
                           </div>
                           <div className="counter-desc"> <span className="count-number text-black" data-to="6000" data-speed="2000">6000</span>
                             <h6>Happy Clients</h6>
@@ -78,7 +81,8 @@ export default function Aboutus() {
                       </div>
                       <div className="item">
                         <div className="counter d-flex">
-                          <div className="counter-icon me-3"> <i className="flaticon-award"></i>
+                          <div className="counter-icon me-3">
+                            <img src="assets/images/icons/08.svg" alt="Excellence Image Icon" />
                           </div>
                           <div className="counter-desc"> <span className="count-number text-black" data-to="200" data-speed="2000">200</span>
                             <h6>Excellence</h6>
@@ -128,71 +132,7 @@ export default function Aboutus() {
             </div>
           </section>
 
-          {/* <!--multi-sec start--> */}
-          {/* <section className="p-0">
-            <div className="container-fluid ps-0">
-              <div className="row">
-                <div className="col-lg-7 col-md-10 col-11">
-                  <div className="dark-bg p-lg-7 p-4 pb-10" data-bg-img="assets/images/pettern/02.png">
-                    <div className="section-title ms-md-5">
-                      <h2 className="title">We’re Setting the New Standards in Laboratory & Research Professional.</h2>
-                      <p className="lead text-light">We Provide All Aspects Of Medical Practice For Your Whole Family!</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="container">
-              <div className="row">
-                <div className="col-lg-6 col-md-8 pe-md-0">
-                  <div className="light-bg p-5 z-index-1 mt-n7">
-                    <div className="ht-progress-bar mb-4">
-                      <h4>Environmental Testing</h4>
-                      <div className="progress" data-value="85">
-                        <div className="progress-bar">
-                          <div className="progress-parcent"><span>85</span>%</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="ht-progress-bar mb-4">
-                      <h4>Immune system</h4>
-                      <div className="progress" data-value="75">
-                        <div className="progress-bar">
-                          <div className="progress-parcent"><span>75</span>%</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="ht-progress-bar mb-4">
-                      <h4>Advanced Microscopy</h4>
-                      <div className="progress" data-value="95">
-                        <div className="progress-bar">
-                          <div className="progress-parcent"><span>95</span>%</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="ht-progress-bar">
-                      <h4>Management</h4>
-                      <div className="progress" data-value="80">
-                        <div className="progress-bar">
-                          <div className="progress-parcent"><span>80</span>%</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-6 col-md-10 col-12 ms-auto ps-0">
-                  <div className="position-relative overflow-hidden img-border mt-n15 custom-mt-0">
-                    <img className="img-fluid w-100" src="assets/images/about/02.jpeg" alt="" />
-                    <div className="video-btn video-btn-pos"> <Link className="play-btn popup-youtube mr-3" href="https://www.youtube.com/watch?v=P_wKDMcr1Tg"><i className="las la-play"></i></Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section> */}
-          {/* <!--multi-sec end--> */}
 
-          {/* <!--service start--> */}
           <section className='pb-0'>
             <div className='container'>
               <div className="row justify-content-center text-center">
@@ -210,7 +150,7 @@ export default function Aboutus() {
                           <div className='col-lg-6'>
                             <div className='service_detail_left text-center float-end rounded-1'>
                               <div className='text-center'>
-                                <img src='assets/images/about/001.png' className='mx-auto' alt='' />
+                                <img src='assets/images/about/001.png' className='mx-auto' alt='Who we are Icon' />
                                 <h5 className='mt-3 font-w-5 mb-0'>Who we are</h5>
                                 <p className='pt-3 mt-1 text-center mb-0'>
                                   Heartberry Overseas Pvt. Ltd is proud to introduce itself as a one-stop source for all Pharmaceutical needs Based in Surat, Gujarat, India.
@@ -220,7 +160,7 @@ export default function Aboutus() {
                           </div>
                           <div className='col-lg-6'>
                             <div className=' text-center position-relative service_right'>
-                              <img src='assets/images/about/06.png' className='img-fluid mx-auto d-block' alt='' />
+                              <img src='assets/images/about/06.png' className='img-fluid mx-auto d-block' alt='Who we are Image' />
                             </div>
                           </div>
                         </div>
@@ -229,13 +169,13 @@ export default function Aboutus() {
                         <div className='row'>
                           <div className='col-lg-6'>
                             <div className=' text-center position-relative service_left'>
-                              <img src='assets/images/about/07.png' className='img-fluid mx-auto d-block' alt='' />
+                              <img src='assets/images/about/07.png' className='img-fluid mx-auto d-block' alt='Who we are Icon' />
                             </div>
                           </div>
                           <div className='col-lg-6'>
                             <div className='service_detail_right text-center float-end rounded-1'>
                               <div className='text-center'>
-                                <img src='assets/images/about/002.png' className='mx-auto' alt='' />
+                                <img src='assets/images/about/002.png' className='mx-auto' alt='Mission & Vision Image' />
                                 <h5 className='mt-3 font-w-5 mb-0'>Mission & Vision</h5>
                                 <p className='pt-3 mt-1 text-center mb-0'>
                                   Our vision is to become a world-leading specialty pharma company in India and to become a significant global player by providing high quality.
@@ -250,7 +190,7 @@ export default function Aboutus() {
                           <div className='col-lg-6'>
                             <div className='service_detail_left text-center float-end rounded-1'>
                               <div className='text-center'>
-                                <img src='assets/images/about/003.png' className='mx-auto' alt='' />
+                                <img src='assets/images/about/003.png' className='mx-auto' alt='Our Values Icon' />
                                 <h5 className='mt-3 font-w-5 mb-0'>Our Values</h5>
                                 <p className='pt-3 mt-1 text-center mb-0'>
                                   Heartberry Overseasl Pvt. Ltd is committed to producing quality medicinal products, fulfilling Regulatory & Statutory requirements for customer satisfaction.
@@ -260,7 +200,7 @@ export default function Aboutus() {
                           </div>
                           <div className='col-lg-6'>
                             <div className=' text-center position-relative service_right'>
-                              <img src='assets/images/about/08.png' className='img-fluid mx-auto d-block' alt='' />
+                              <img src='assets/images/about/08.png' className='img-fluid mx-auto d-block' alt=' Our Values Image' />
                             </div>
                           </div>
                         </div>
@@ -269,13 +209,13 @@ export default function Aboutus() {
                         <div className='row'>
                           <div className='col-lg-6'>
                             <div className=' text-center position-relative service_left'>
-                              <img src='assets/images/about/09.png' className='img-fluid mx-auto d-block' alt='' />
+                              <img src='assets/images/about/09.png' className='img-fluid mx-auto d-block' alt=' Our Service Image' />
                             </div>
                           </div>
                           <div className='col-lg-6'>
                             <div className='service_detail_right text-center float-end rounded-1'>
                               <div className='text-center'>
-                                <img src='assets/images/about/004.png' className='mx-auto' alt='' />
+                                <img src='assets/images/about/004.png' className='mx-auto' alt='Our Service Icon' />
                                 <h5 className='mt-3 font-w-5 mb-0'>Our Service</h5>
                                 <p className='pt-3 mt-1 text-center mb-0'>
                                   High-quality public health is imperative for a working society and a country’s financial development,We at Heartberry Overseas Pvt. Ltd.
@@ -291,9 +231,7 @@ export default function Aboutus() {
               </div>
             </div>
           </section>
-          {/* <!--service start--> */}
 
-          {/* <!--faq need help start--> */}
           <section className='pb-0'>
             <div className="container">
               <div className="row justify-content-center text-center">
@@ -354,7 +292,7 @@ export default function Aboutus() {
                         </button>
                       </h2>
                       <div id="collapseFive" className="accordion-collapse border-0 collapse" aria-labelledby="headingFive" data-bs-parent="#accordion">
-                        <div className="accordion-body">You can contact us at +91 9854499900 or drop your inquiry at info@heartberryoverseas.com. We are headquartered at Surat.</div>
+                        <div className="accordion-body">You can contact us at +91 9854499900 or drop your inquiry at <Link href="mailto:info@heartberryoverseas.com">info@heartberryoverseas.com</Link> We are headquartered at Surat.</div>
                       </div>
                     </div>
                     <div className="accordion-item">
@@ -386,30 +324,6 @@ export default function Aboutus() {
               </div>
             </div>
           </section>
-          {/* <!--faq need help end--> */}
-
-          {/* <!--call us start--> */}
-          {/* <section className="theme-bg py-5">
-            <div className="container">
-              <div className="row align-items-center">
-                <div className="col-md-6 col-12">
-                  <h3 className="text-light">Need a Help for Check-up? Call for an Emergency Laboratory Services</h3>
-                </div>
-                <div className="col-md-5 col-12 ms-auto mt-3 mt-lg-0">
-                  <div className="d-flex align-items-start justify-content-end">
-                    <div className="text-white text-end"> <span>Help Desk 24/7</span>
-                      <h3 className="font-w-4"><Link className="text-decoration-underline text-white" href="tel:+(91)9854499900">+91 9854499900</Link></h3>
-                    </div> <span className="white-bg d-inline-block p-2 ms-4"><i className="las la-phone ic-3x text-theme"></i></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section> */}
-          {/* <!--call us end--> */}
-
-
-
-          {/* <!--testimonial start--> */}
 
           <section className="pb-0">
             <div className="container-fluid p-0">
@@ -419,32 +333,88 @@ export default function Aboutus() {
               <div className="row g-0">
                 <div className="col-md-4" data-bg-img="assets/images/about/05.jpeg"></div>
                 <div className="col-md-8 theme-bg py-5 px-lg-8 px-5">
-                  <div className="owl-carousel no-pb" data-dots="false" data-items="1" data-autoplay="true" data-autoplay-timeout="8000">
+                  <div className="owl-carousel no-pb client-profile" data-dots="false" data-items="1" data-autoplay="true" data-autoplay-timeout="8000">
                     <div className="item">
-                      <div className="testimonial text-center">
+                      <div className="testimonial text-center ">
                         <div className="testimonial-img mb-2">
-                          <img className="img-fluid rounded-circle shadow-sm d-inline-block" src="assets/images/testimonial/01.jpeg" alt="" />
+                          <img className="img-fluid rounded-circle shadow-sm d-inline-block" src="assets/images/clients/Clients-01.jpg" alt="Texas gal Profile" />
                         </div>
                         <div className="testimonial-content">
                           <div className="testimonial-caption mb-3">
-                            <h5 className="text-white">Andrew Rooney</h5>
-                            <label className="fst-italic d-block text-light">-Supervisor</label>
+                            <h5 className="text-white">Texas gal</h5>
+                            <label className="fst-italic d-block text-light">Surat,GJ</label>
                           </div>
-                          <p className="fst-italic text-light">Labortech great place to work because of the opportunities for moving between centres and trying something new within your area of expertise. The laboratory is also an open and flexible workplace & great place to work with.</p>
+                          <p className="fst-italic text-light">Comes within 3 weeks. Ordered successfully several times. Good customer service when I have questions. I am pleased with their consistency and quality. So glad I found them.</p>
                         </div>
                       </div>
                     </div>
                     <div className="item">
                       <div className="testimonial text-center">
-                        <div className="testimonial-img mb-2">
-                          <img className="img-fluid rounded-circle shadow-sm d-inline-block" src="assets/images/testimonial/01.jpeg" alt="" />
+                        <div className="testimonial-img mb-2 ">
+                          <img className="img-fluid rounded-circle shadow-sm d-inline-block" src="assets/images/clients/Clients-01.jpg" alt="Kurt Profile" />
                         </div>
                         <div className="testimonial-content">
                           <div className="testimonial-caption mb-3">
-                            <h5 className="text-white">Andrew Rooney</h5>
-                            <label className="fst-italic d-block text-light">-Supervisor</label>
+                            <h5 className="text-white">Kurt</h5>
+                            <label className="fst-italic d-block text-light">Surat,GJ</label>
                           </div>
-                          <p className="fst-italic text-light">Labortech great place to work because of the opportunities for moving between centres and trying something new within your area of expertise. The laboratory is also an open and flexible workplace & great place to work with.</p>
+                          <p className="fst-italic text-light">Reliable, trustworthy company. The do what they promised. Expect delivery the right good in time. They do not necessarly deliver according to the pictures they showed which is strange for western customers.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="item">
+                      <div className="testimonial text-center">
+                        <div className="testimonial-img mb-2 ">
+                          <img className="img-fluid rounded-circle shadow-sm d-inline-block" src="assets/images/clients/Clients-01.jpg" alt="Rose Navarre Profile" />
+                        </div>
+                        <div className="testimonial-content">
+                          <div className="testimonial-caption mb-3">
+                            <h5 className="text-white">Rose Navarre</h5>
+                            <label className="fst-italic d-block text-light">Surat,GJ</label>
+                          </div>
+                          <p className="fst-italic text-light">I love ordering from Heartberry ! My items come, well, packaged and in a timely matter. Thank you so much for making this available to us. </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="item">
+                      <div className="testimonial text-center">
+                        <div className="testimonial-img mb-2 ">
+                          <img className="img-fluid rounded-circle shadow-sm d-inline-block" src="assets/images/clients/Clients-01.jpg" alt="bransonbergs Profile" />
+                        </div>
+                        <div className="testimonial-content">
+                          <div className="testimonial-caption mb-3">
+                            <h5 className="text-white">bransonbergs</h5>
+                            <label className="fst-italic d-block text-light">Surat,GJ</label>
+                          </div>
+                          <p className="fst-italic text-light">You have make our critical products readily available with very good response and great quality. You make the process very easy for the customer!</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="item">
+                      <div className="testimonial text-center">
+                        <div className="testimonial-img mb-2 ">
+                          <img className="img-fluid rounded-circle shadow-sm d-inline-block" src="assets/images/clients/Clients-01.jpg" alt="gretchen Profile" />
+                        </div>
+                        <div className="testimonial-content">
+                          <div className="testimonial-caption mb-3">
+                            <h5 className="text-white">gretchen</h5>
+                            <label className="fst-italic d-block text-light">Surat,GJ</label>
+                          </div>
+                          <p className="fst-italic text-light">Great service - I called to check on the order and they were helpful and prompt. The order took about 2 weeks to get (no fault of theirs-they shipped promptly).</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="item">
+                      <div className="testimonial text-center">
+                        <div className="testimonial-img mb-2 ">
+                          <img className="img-fluid rounded-circle shadow-sm d-inline-block" src="assets/images/clients/Clients-01.jpg" alt="Sheila Profile" />
+                        </div>
+                        <div className="testimonial-content">
+                          <div className="testimonial-caption mb-3">
+                            <h5 className="text-white">Sheila</h5>
+                            <label className="fst-italic d-block text-light">Surat,GJ</label>
+                          </div>
+                          <p className="fst-italic text-light">Quick response to any inquiries I had and quick delivery of my order. They were very helpful and accommodating. I highly recommend.</p>
                         </div>
                       </div>
                     </div>
@@ -453,6 +423,7 @@ export default function Aboutus() {
               </div>
             </div>
           </section>
+
         </div>
       </div>
 

@@ -15,7 +15,7 @@ export default function Footer() {
                     id="footer-logo"
                     className="img-fluid"
                     src="assets/images/logo.png"
-                    alt=""
+                    alt="Footer Logo"
                   />
                 </Link>
                 <p className="my-4">

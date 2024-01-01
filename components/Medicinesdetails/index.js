@@ -48,13 +48,14 @@ export default function Productdetails() {
                 </section>
 
                 <div className="page-content">
+                    
                     <section>
                         <div className="container">
                             <div className="row">
                                 <div className="col-xl-7">
                                     <div className='d-flex flex-sm-row flex-column align-items-sm-start justify-content-xl-start justify-content-center text-center  gap-4'>
                                         <div className=' order-sm-1 order-0 d-flex align-items-center justify-content-center'>
-                                            <img className="img-fluid mx-auto border" src="assets/images/product/01.jpeg" alt="" />
+                                            <img className="img-fluid mx-auto border" src="assets/images/product/01.jpeg" alt="Product Image" />
                                         </div>
                                         <div className='order-sm-0  order-1 '>
                                             <div className='d-flex align-items-center flex-sm-column justify-content-center flex-row gap-3'>
@@ -171,13 +172,12 @@ export default function Productdetails() {
                             </div>
                         </div>
                     </section>
-                    {/* <!--tab start--> */}
+
                     <section className="light-bg">
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-12">
                                     <div className="tab">
-                                        {/* <!-- Nav tabs --> */}
                                         <ul className="nav nav-tabs" id="myTab" role="tablist">
                                             <li className="nav-item" role="presentation"> <Link className="nav-link active" id="tab1-1" data-bs-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Description</Link>
                                             </li>
@@ -386,10 +386,7 @@ export default function Productdetails() {
                             </div>
                         </div>
                     </section>
-                    {/* <!--tab end--> */}
 
-
-                    {/* <!--recent product start--> */}
                     <section>
                         <div className="container">
                             <div className="row justify-content-center text-center">
@@ -408,7 +405,6 @@ export default function Productdetails() {
                             </div>
                         </div>
                     </section>
-                    {/* <!--recent product end--> */}
 
                 </div>
             </div>

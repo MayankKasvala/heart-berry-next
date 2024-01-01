@@ -193,6 +193,7 @@ export default function Productlist() {
         <>
         
             <div className="page-wrapper">
+
                 <section className="page-title parallaxie" data-bg-img="assets/images/bg/06.jpeg">
                     <div className="container">
                         <div className="row">
@@ -211,10 +212,8 @@ export default function Productlist() {
                         </div>
                     </div>
                 </section>
+
                 <div className="page-content">
-
-                    {/* <!--product list start--> */}
-
                     <section>
                         <div className="container">
                             <div className="row">
@@ -393,7 +392,7 @@ export default function Productlist() {
                                         <h4 className="widget-title mb-3">Populer Product</h4>
                                         <div className="row align-items-center mb-4">
                                             <div className="col-sm-4">
-                                                <img src="assets/images/product/01.jpeg" className="img-fluid" alt="..." />
+                                                <img src="assets/images/product/01.jpeg" className="img-fluid" alt="Product Image" />
                                             </div>
                                             <div className="col-sm-8">
                                                 <h5 className="h6">
@@ -405,7 +404,7 @@ export default function Productlist() {
                                         </div>
                                         <div className="row align-items-center mb-4">
                                             <div className="col-sm-4">
-                                                <img src="assets/images/product/03.jpeg" className="img-fluid" alt="..." />
+                                                <img src="assets/images/product/03.jpeg" className="img-fluid" alt="Product Image" />
                                             </div>
                                             <div className="col-sm-8">
                                                 <h5 className="h6">
@@ -417,7 +416,7 @@ export default function Productlist() {
                                         </div>
                                         <div className="row align-items-center">
                                             <div className="col-sm-4">
-                                                <img src="assets/images/product/04.jpeg" className="img-fluid" alt="..." />
+                                                <img src="assets/images/product/04.jpeg" className="img-fluid" alt="Product Image" />
                                             </div>
                                             <div className="col-sm-8">
                                                 <h5 className="h6">
@@ -451,10 +450,8 @@ export default function Productlist() {
                             </div>
                         </div>
                     </section>
-
-                    {/* <!--product list end--> */}
-
                 </div>
+
             </div>
         </>
     )

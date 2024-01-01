@@ -12,7 +12,7 @@ export default function Productcardlist({ productcardlist }) {
                                 <div className="row align-items-center">
                                     <div className="col-lg-4 col-sm-5">
                                         <div className="product-img position-relative overflow-hidden">
-                                            <img className="img-fluid product_img" src={props.image} alt="..." />
+                                            <img className="img-fluid product_img" src={props.image} alt="Product Image" />
                                             <div className="product-link d-flex align-items-center justify-content-center gap-4 position-absolute top-50 start-50 translate-middle p-0">
                                                 <button className="btn-compare" type="button"><i className="las la-random"></i>
                                                 </button>

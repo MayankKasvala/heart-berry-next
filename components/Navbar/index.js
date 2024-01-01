@@ -54,7 +54,7 @@ export default function Navbar() {
                                             </li>
                                         </ul>
                                     </div>
-                                    <div className="language-selection ms-3">
+                                    {/* <div className="language-selection ms-3">
                                         <div className="dropdown">
                                             <button className="dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">English</button>
                                             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -68,7 +68,7 @@ export default function Navbar() {
                                                 </li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -80,7 +80,7 @@ export default function Navbar() {
                             <div className="col">
                                 <nav className="navbar navbar-expand-lg">
                                     <Link className="navbar-brand logo" href="">
-                                        <img id="logo-img" className="img-fluid" src="assets/images/logo.png" alt="" />
+                                        <img id="logo-img" className="img-fluid" src="assets/images/logo.png" alt="Logo Image" />
                                     </Link>
                                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span></span>
                                         <span></span>
@@ -175,12 +175,12 @@ export default function Navbar() {
                                             <button type="submit" className="btn btn-theme btn-sm"><i className="las la-times"></i>
                                             </button>
                                         </div>
-                                        <Link href="product-left-image.html">
+                                        <Link href="">
                                             <img className="img-fluid" src="assets/images/product/01.jpeg" alt="..." />
                                         </Link>
                                     </div>
                                     <div className="col-7">
-                                        <h6><Link className="link-title" href="product-single.html">Dealistic Microscope</Link></h6>
+                                        <h6><Link className="link-title" href="">Dealistic Microscope</Link></h6>
                                         <div className="product-meta"><span className="me-2 text-theme">$120.00</span><span className="text-muted">x 1</span>
                                         </div>
                                     </div>
@@ -194,12 +194,12 @@ export default function Navbar() {
                                             <button type="submit" className="btn btn-theme btn-sm"><i className="las la-times"></i>
                                             </button>
                                         </div>
-                                        <Link href="product-single.html">
+                                        <Link href="">
                                             <img className="img-fluid" src="assets/images/product/02.jpeg" alt="..." />
                                         </Link>
                                     </div>
                                     <div className="col-7">
-                                        <h6><Link className="link-title" href="product-left-image.html">Biotechnology Microscope</Link></h6>
+                                        <h6><Link className="link-title" href="">Biotechnology Microscope</Link></h6>
                                         <div className="product-meta"><span className="me-2 text-theme">$160.00</span><span className="text-muted">x 1</span>
                                         </div>
                                     </div>
@@ -207,8 +207,8 @@ export default function Navbar() {
                             </div>
                             <hr className="my-5" />
                             <div className="d-flex justify-content-between align-items-center mb-8"> <span className="text-muted">Subtotal:</span>  <span className="text-dark">$280.00</span>
-                            </div><Link href="product-cart.html" className="btn btn-theme me-2">View Cart</Link>
-                            <Link href="product-checkout.html" className="btn btn-dark">Continue To Checkout</Link>
+                            </div><Link href="" className="btn btn-theme me-2">View Cart</Link>
+                            <Link href="" className="btn btn-dark">Continue To Checkout</Link>
                         </div>
                     </div>
                 </div>

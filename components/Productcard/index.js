@@ -1,8 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
 
+
 export default function Productcard({ product_data }) {
     return (
+        
         <>
             {
                 product_data.map((props) => {
@@ -11,7 +13,7 @@ export default function Productcard({ product_data }) {
                             <div key={props.key} >
                                 <div className="card product-card rounded-0">
                                     <div className="product-img position-relative overflow-hidden">
-                                        <img className="img-fluid product_img" src={props.image} alt="..." />
+                                        <img className="img-fluid product_img" src={props.image} alt="Product Image" />
                                         <div className="product-link d-flex align-items-center gap-4 position-absolute top-50 start-50 translate-middle p-0">
                                             <div className='d-flex align-items-center justify-content-center'>
                                                 <Link href={props.card_link}>

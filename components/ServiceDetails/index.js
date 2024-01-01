@@ -14,7 +14,7 @@ export default function Servicedetails() {
                         <div className="row">
                             <div className="col-lg-8 col-md-12 pe-lg-5">
                                 <div className="service-details">
-                                    <img className="img-fluid w-100 mb-4" src="assets/images/service/large/01.jpg" alt="" />
+                                    <img className="img-fluid w-100 mb-4" src="assets/images/service/large/01.jpg" alt="Service Image" />
                                         <h3 className="mb-3">A Full services from a clinical lab Pathologycam Testing</h3>
                                         <p className="lead">We have put protocols to protect our patients and staff care. Service overview With experience contracting and professional industry latest generation technological. Excepturi vero aliquam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                         <p className="mb-5">Our design professionals are equippe Totam mollitia incidunt vero cupiditate obcaecati iusto tempora unde! Numquam officiis, quae adipisci quam laudantium nulla modi. adipisci quam laudantium nulla modi. Totam mollitia incidunt vero cupiditate obcaecati</p>

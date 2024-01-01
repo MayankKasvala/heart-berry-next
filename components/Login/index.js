@@ -16,6 +16,7 @@ export default function Login() {
     return (
         <>
             <div className="page-wrapper">
+                
                 <section className="page-title parallaxie" data-bg-img="assets/images/bg/06.jpeg">
                     <div className="container">
                         <div className="row">
@@ -38,16 +39,14 @@ export default function Login() {
                         </div>
                     </div>
                 </section>
+
                 <div className="page-content">
-
-                    {/* <!--login start--> */}
-
                     <section>
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-6 text-center dark-bg">
                                     <div className="p-lg-5 px-3 py-5">
-                                        <img className="img-fluid" src="assets/images/login/login-img.png" alt="" />
+                                        <img className="img-fluid" src="assets/images/login/login-img.png" alt="Login Image" />
                                         <div className="section-title mb-0 mt-5">
                                             <h2 className="title">Welcome To The Labortech</h2>
                                             <p className="mb-0 text-light">Any Question or Remarks ? Just Write Us a Message!</p>
@@ -59,7 +58,7 @@ export default function Login() {
                                 <div className="col-lg-6 white-bg">
                                     <div className="p-lg-5 px-3 py-5">
                                         <h3 className="mb-4">Login Your Account</h3>
-                                        <form id="contact-form" method="post" action="php/contact.php">
+                                        <form id="contact-form" method="post" action="">
                                             <div className="messages"></div>
                                             <div className="form-group">
                                                 <input id="form_name" type="text" name="name" className="form-control" placeholder="User name" required="required" data-error="Username is required." />
@@ -80,16 +79,13 @@ export default function Login() {
                                             <Link href="" className="btn btn-theme"><span>Login Now</span></Link>
                                         </form>
                                         <div className="d-flex align-items-center mt-4"> <span className="text-black me-1">Don't have an account?</span>
-                                            <Link href="signup.html">Sign Up</Link>
+                                            <Link href="">Sign Up</Link>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-
-                    {/* <!--login end--> */}
-
                 </div>
             </div>
         </>
