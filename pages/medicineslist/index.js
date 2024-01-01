@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import React from "react";
-const DynamicAbout = dynamic(() => import("../../components/Contact"), {
+const DynamicAbout = dynamic(() => import("../../components/Medicineslist"), {
     ssr: false, // Ensure this component isn't SSR'd
 });
 

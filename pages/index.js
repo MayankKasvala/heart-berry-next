@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 import React from "react";
 
-const DynamicHome = dynamic(() => import("../../components/Home"), {
+const DynamicHome = dynamic(() => import("../components/Home"), {
   ssr: false, // Ensure this component isn't SSR'd
 });
 
