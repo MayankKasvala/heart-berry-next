@@ -124,7 +124,7 @@ function bannerslider() {
       nav: $carousel.data("nav"),
       autoplay: true,
       autoplayTimeout: 6000,
-      navText: ['<span className="las la-angle-left"><span>', '<span className="las la-angle-right"></span>'],
+      navText: ['<span class="las la-angle-left"><span>', '<span class="las la-angle-right"></span>'],
     });
   });
 };
